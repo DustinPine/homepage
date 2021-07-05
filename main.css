@@ -1,0 +1,117 @@
+:root {
+    --base: #747198;
+    --bg-blend: multiply;
+    --blur: 0px;
+    --fg-blend: lighten;
+    --foreground: #2e2e48;
+    --opacity: 0.76;
+    --spacing: 0px;
+}
+
+
+html {
+    font-family: 'Merriweather Sans', sans-serif;
+    line-height: 1.75em;
+}
+
+body {
+    margin: 0;
+    background-color: #403E58;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {}
+
+main nav {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+    background-color: #504E6C;
+    padding: 1.35rem 2.35rem;
+    border-radius: 8px;
+}
+
+ul li {
+    padding-left: 0.75rem;
+    text-indent: -2ch;
+}
+
+a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #908daf;
+}
+
+.linkhead {
+    color: #A19EC1;
+    font-size: 1.75rem;
+    padding-bottom: 0.75rem;
+}
+
+form {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 95%;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.25rem;
+    background-color: #35334E;
+    color: #A8A5C7;
+    border: none;
+    border-radius: 8px;
+}
+
+#image {
+    background-color: var(--base);
+    display: table;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    line-height: 0px;
+    padding: 10px 0;
+    border-radius: 8px;
+}
+
+#image img {
+    filter: grayscale(100%) contrast(1) blur(var(--blur));
+    max-width: 95%;
+    height: 18rem;
+    margin: 0px auto 0px auto;
+    mix-blend-mode: var(--bg-blend);
+    border-radius: 8px;
+    object-fit: cover;
+    padding: var(--spacing);
+}
+
+#image::before {
+    background-color: var(--foreground);
+    bottom: 0;
+    content: '';
+    height: 100%;
+    left: 0;
+    mix-blend-mode: var(--fg-blend);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 1;
+}
+
+.greeting {
+    font-size: 1.65rem;
+    text-align: center;
+    color: #A8A5C7;
+}
