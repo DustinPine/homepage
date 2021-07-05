@@ -97,7 +97,7 @@ input {
     padding: var(--spacing);
 }
 
-#image::before {
+main #image::before {
     background-color: var(--foreground);
     bottom: 0;
     content: '';
